@@ -574,16 +574,6 @@ var Select = React.createClass({
 				// down
 				this.focusNextOption();
 				break;
-			case 188:
-				// ,
-				if (this.props.allowCreate && this.props.multi) {
-					event.preventDefault();
-					event.stopPropagation();
-					this.selectFocusedOption();
-				} else {
-					return;
-				}
-				break;
 			default:
 				return;
 		}
