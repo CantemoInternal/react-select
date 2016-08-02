@@ -959,16 +959,11 @@ var Select = React.createClass({
 		var input;
 		var inputProps = {
 			ref: 'input',
-			className: 'Select-input ' + (this.props.inputProps.className || ''),
+			className: 'Select-input ',
 			tabIndex: this.props.tabIndex || 0,
 			onFocus: this.handleInputFocus,
 			onBlur: this.handleInputBlur
 		};
-		for (var key in this.props.inputProps) {
-			if (this.props.inputProps.hasOwnProperty(key) && key !== 'className') {
-				inputProps[key] = this.props.inputProps[key];
-			}
-		}
 
 		if (!this.props.disabled) {
 			if (this.props.searchable) {
@@ -991,7 +986,7 @@ var Select = React.createClass({
 		return React.createElement(
 			'div',
 			{ ref: 'wrapper', className: selectClass },
-			React.createElement('input', { type: 'hidden', ref: 'value', name: this.props.name, value: this.state.value, disabled: this.props.disabled }),
+			React.createElement('input', _extends({ type: 'hidden', ref: 'value', name: this.props.name, value: this.state.value, disabled: this.props.disabled }, this.props.inputProps)),
 			React.createElement(
 				'div',
 				{ className: 'Select-control', ref: 'control', onKeyDown: this.handleKeyDown, onMouseDown: this.handleMouseDown, onTouchEnd: this.handleMouseDown },
