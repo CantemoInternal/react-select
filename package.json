@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.0",
-    "react-input-autosize": "^0.6.2"
+    "react-input-autosize": "git://github.com/CantemoInternal/react-input-autosize.git#b8772008b83b5f0a41a5bca859d3eac5d124949e"
   },
   "devDependencies": {
     "babel": "^5.8.23",
